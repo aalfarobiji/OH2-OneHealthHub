@@ -46,7 +46,7 @@ export const getChatbotResponse = async (history: ChatMessage[], newMessage: str
  * @returns A PredictionResult object with insights, risk level, recommendations, and chart data.
  */
 export const getPrediction = async (disease: Disease, csvData: string, interventions: {[key: string]: number}, modelName: string, predictionPeriod: number): Promise<PredictionResult> => {
-    const model = 'gemini-2.5-pro'; // Use a more powerful model for data analysis
+    const model = 'gemini-2.5-flash'; // Use a more powerful model for data analysis
 
     const interventionPrompt = Object.keys(interventions).length > 0
         ? `
