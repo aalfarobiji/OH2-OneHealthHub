@@ -12,7 +12,7 @@ const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
  * @returns A string containing the model's response.
  */
 export const getChatbotResponse = async (history: ChatMessage[], newMessage: string, context: string): Promise<string> => {
-    const model = 'gemini-2.5-flash';
+    const model = 'gemini-1.5-flash';
 
     const chatHistory = history.slice(1).map(msg => ({
         role: msg.role,
